@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux'
-import React from 'react'
+import { store } from './redux/store'
+import ListaContatos from './containers/ListaContatos'
 import GlobalStyle from './styles/GlobalStyle'
 
 const App = () => (
