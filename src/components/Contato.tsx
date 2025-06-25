@@ -1,14 +1,4 @@
-import styled from 'styled-components'
-
-const Card = styled.div`
-  background: #fff;
-  padding: 16px;
-  margin: 8px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: space-between;
-`
+import { Card, Botoes } from './style'
 
 interface Props {
   nome: string
@@ -25,10 +15,10 @@ const Contato = ({ nome, email, telefone, aoEditar, aoRemover }: Props) => (
       {email}<br />
       {telefone}
     </div>
-    <div>
+    <Botoes>
       <button onClick={aoEditar}>Editar</button>
       <button onClick={aoRemover}>Remover</button>
-    </div>
+    </Botoes>
   </Card>
 )
 

@@ -8,8 +8,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #eee;
-    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding: 20px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  input, button {
+    font-family: inherit;
   }
 `
 

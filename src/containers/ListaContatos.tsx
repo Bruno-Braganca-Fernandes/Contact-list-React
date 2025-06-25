@@ -3,27 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../redux/store'
 import { adicionar, editar, remover, Contato as ContatoType } from '../redux/contatosSlice'
 import Contato from '../components/Contato'
-import styled from 'styled-components'
-
-const Container = styled.div`
-  max-width: 600px;
-  margin: 40px auto;
-`
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  input {
-    padding: 8px;
-    margin-bottom: 8px;
-  }
-
-  button {
-    padding: 8px;
-  }
-`
+import { Container, Form } from './style'
 
 const ListaContatos = () => {
   const dispatch = useDispatch()
@@ -68,8 +48,8 @@ const ListaContatos = () => {
       <h1>Lista de Contatos</h1>
       <Form onSubmit={handleSubmit}>
         <input placeholder="Nome completo" value={nome} onChange={(e) => setNome(e.target.value)} required />
-        <input placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
+        <input type='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type='number' placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
         <button type="submit">{idEditando ? 'Salvar edição' : 'Adicionar contato'}</button>
       </Form>
 
